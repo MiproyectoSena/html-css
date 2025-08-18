@@ -1,0 +1,106 @@
+<!-- Atributo
+autocomplete="": Es para completar o rellenar los valores de  los campos del formulario, asi como orientacion al navegador de que tipo de informacion se espera en el campo
+
+Tipos de destinatario
+home: Para conectar al destinatario a su residencia
+work: Para contactar al destinatario a su trabajo
+mobile: Para contactar al destinatario independientemente de su ubicacion
+fax: Identificado posteriormente en una maquina de fax
+page: El destinatario identificado en un busca personas
+
+Contacto digitales
+tel: Un numero completo incluido el codigo del pais, si se divide por sus componentes:
+    tel-country-code: El código de país, como "1" para Estados Unidos, Canadá y otras áreas de América del Norte y partes del Caribe
+    tel-national: El número de teléfono completo sin el componente de código de país, incluido un prefijo interno del país. Para el número de teléfono "1-855-555-6502", el valor de este campo sería "855-555-6502"
+    tel-area-code: El código de área, con cualquier prefijo interno del país aplicado si corresponde
+    tel-local: El número de teléfono sin el código de país o área. Esto se puede dividir en dos partes, para números de teléfono que tienen un número de intercambio y luego un número dentro del intercambio. Para el número de teléfono "555-6502", utilice tel-local-prefix para "555" y tel-local-suffix para "6502"
+tel-extension: Un código de extensión telefónica dentro del número de teléfono, como un número de habitación o suite en un hotel o una extensión de oficina en una empresa
+email: Una direccion de correo electronico
+impp: Una URL para un punto final de protocolo de mensajeria instantanea, como xmpp:username@example.net
+
+Otros
+name: El campo espera que el valor sea el nombre complero de una persona. Usando name En lugar de dividir el nombre en sus componentes, generalmente se prefiere porque evita abordar la amplia diversidad de nombres humanos y cómo están estructurados; sin embargo, puede utilizar lo siguiente: autocomplete valores si necesita dividir el nombre en sus componentes:
+    honorific-prefix: El prefijo o título, como "Sra.", "Sr.", "Señorita", "Sra.", "Dr." o "Mlle"
+    given-name: El nombre dado (o "primero")
+    additional-name: El segundo nombre
+    family-name: El nombre de la familia (o "último")
+    honorific-suffix: El sufijo, como "Jr.", "B.Sc.", "PhD.", "MBASW" o "IV"
+    nickname: Un apodo o nombre de usuario
+username: Un nombre de usuario o nombre de cuenta
+new-password: Una nueva contraseña Al crear una nueva cuenta o cambiar contraseñas, esto debe usarse para un campo "Ingrese su nueva contraseña" o "Confirmar nueva contraseña", en lugar de un campo general "Ingrese su contraseña actual" que pueda estar presente. El navegador puede utilizar esto tanto para evitar completar accidentalmente una contraseña existente como para ofrecer ayuda para crear una contraseña segura
+current-password: La contraseña actual del usuario
+one-time-code: Una contraseña de un solo uso (OTP) para verificar la identidad del usuario que se utiliza como factor adicional en un flujo de inicio de sesion. Lo más común es que se trate de un código recibido a través de algún mecanismo fuera de canal, como SMS, correo electrónico o aplicación de autenticación
+organization-title: Un titulo de trabajo, o el titulo que una persona tiene dentro de una organizacion, como "Redactor técnico senior", "Presidente" o "Líder adjunto de tropas"
+organization: Un nombre de una empresa u organizacion, como "Acme Widget Company" o "Girl Scouts of America"
+street-address: Una direccoion postal, puede ser varias líneas de texto y debe identificar completamente la ubicación de la dirección dentro de su segundo nivel administrativo (normalmente una ciudad o pueblo), pero no debe incluir el nombre de la ciudad, el código postal o postal ni el nombre del país
+    address-line1, address-line2, address-line3: Cada linea individual de la direccion postal, esto solo edberia estar presente sin street-address no esta presente
+address-level4: El de grano mas fino nivel administrativo, en direcciones que tienen cuantro niveles
+address-level3: El tercero nivel administrativo en direcciones con al menos tres niveles administrativos
+address-level2: El segundo nivel administrativo en direcciones que tienen al menos dos de ellos, en paises con dos niveles administrativos , normalmente seria la cuidad, pueblo, aldea u otra localidad en la que se encuentra la direccion
+address-level1: El primer nivel administrativo en la direccion, Esta suele ser la provincia en la que se encuentra la direccion En Estados Unidos, este sería el estado. En Suiza, el cantón. En el Reino Unido, el condado
+country: Codigo de pais o territorio
+country-name: Un nombre de pais o territorio
+postal-code: Un codigo postal
+cc-name: El nombre completo tal como está impreso o asociado con un instrumento de pago, como una tarjeta de crédito. Por lo general, se prefiere utilizar un campo de nombre completo en lugar de dividir el nombre en partes
+    cc-given-name: Un (primer) nombre determinado tal como aparece en un instrumento de pago, como una tarjeta de crédito
+    cc-additional-name: Un segundo nombre tal como aparece en un instrumento de pago o tarjeta de crédito
+    cc-family-name: Un apellido, tal como aparece en una tarjeta de crédito
+cc-number: Un número de tarjeta de crédito u otro número que identifique un método de pago, como un número de cuenta
+cc-exp: Fecha de vencimiento de un método de pago, normalmente en el formato "MM/YY" o "MM/YYYY"
+    cc-exp-month: El mes en el que expira el método de pago
+    cc-exp-year: El año en el que expira el método de pago
+cc-csc: El código de seguridad del instrumento de pago; en las tarjetas de crédito, este es el número de verificación de 3 dígitos que aparece en el reverso de la tarjeta
+cc-type: El tipo de instrumento de pago (como "Visa" o "Master Card")
+transaction-currency: La moneda en la que se realizará la transacción
+transaction-amount: El importe, indicado en la moneda especificada por transaction-currency, de la transacción, para un formulario de pago
+lenguage: Un idioma preferido
+bday: Una fecha de nacimiento, como fecha completa
+    bday-day: El día del mes de una fecha de nacimiento
+    bday-month: El mes del año de una fecha de nacimiento
+    bday-year: El año de una fecha de nacimiento
+sex: Una identidad de género (como "Mujer", "Fa'afafine", "Hijra", "Hombre", "No binario"), como texto de formato libre sin nuevas líneas
+url: Una URL, como una página de inicio o la dirección del sitio web de la empresa, según corresponda, dado el contexto de los otros campos del formulario
+photo: La URL de una imagen que representa a la persona, empresa o información de contacto proporcionada en los demás campos del formulario
+
+Autorizacion WEB
+webauthn: Claves de paso generadas por el API de autenticación web, según lo solicitado por un condicional navigator.credentials.get() llamar (es decir, uno que incluya mediation: 'conditional'). Si se incluye, este es el último token en la lista de tokens separados por espacios
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete#named_groups
+-->
+<!--Atributo
+required se utiliza para marcar un campo de formulario como obligatorio-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autocomplete</title>
+</head>
+<body>
+    <main>
+        <form action="">
+            <label for="Name">
+                <span>¿What's your name?</span>
+                <input type="text" id="Name" name="Name" autocomplete="name" required>
+            </label>
+
+            <label for="Mail">
+                <span>¿What is your mail?</span>
+                <input type="email" id="Mail" name="Mail" autocomplete="email" required>
+            </label>
+
+            <label for="Country">
+                <span>¿What is your Country?</span>
+                <input type="text" id="Country" name="Country" autocomplete="country" required>
+            </label>
+
+            <label for="Zipcode">
+                <span>¿What is your postal code?</span>
+                <input type="text" id="Zipcode" name="Zipcode" autocomplete="postal-code" required>
+            </label>
+            <input type="submit"/>
+        </form>
+    </main>
+</body>
+</html>

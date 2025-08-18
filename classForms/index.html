@@ -1,0 +1,47 @@
+<!-- Clase 1
+
+Etiquetas
+form es una etiqueta para formularios e indica que el  usuario va a ingresar informacion que va al servidor
+label es una etiqueta para asociar texto descriptivo con elementos del formulario, como campos de engtrada, botones, etc
+input es una etiqueta para crear controles interactivos con el fiun de recibir datos del usuario
+span es una etiqueta que sirve como contenedor en linea, utilizado parea aplicar estilos, manipular partes especificas de ubn texto o elementos dentro del formulario sin afectar su estructura general
+
+
+Atributo
+action="": Es para el url donde se estaria enviando la informacion del formulario a la base de datos
+for="": Es para asociar la etiqueta con un elemento del formularion especifico
+type="": Es para especificar el tipo de elemento de entreada que se va a mostrar o el tipo de medio de un elemento enlazado
+text, time, date, number, email, password, checkbox, radio, file, url, color, range, search, tel, datetime-local, month, week.
+placeholder="": Es para mostrar un texto breve dentro del campo de formulario, como un cuadro de textoi, que sirve como pista o sugerencia sobre el tipo de dato
+name="": Es para identificar elementos del formulario, como campos de entrada, botones de radio, casillas de verificacion, etc. Cuando se envian los datos al servidor
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <form action="">
+
+        <label for="Nombre">
+            <span>¿Cuál es tú nombre?</span>
+            <input type="text" id="Nombre"  placeholder="Tu nombre"/>
+        </label>
+
+        <label for="diaPlatzi">
+            <span>¿Cuál día comenzate en platzi?</span>
+            <input type="date" id="diaPlatzi"/>
+        </label>
+        
+        <label for="horarioPlatzi">
+            <span>¿En qué horario estudias?</span>
+            <input type="time" id="horarioPlatzi"/>
+        </label>
+
+    </form>
+</body>
+</html>
