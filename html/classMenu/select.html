@@ -1,0 +1,34 @@
+<!-- Atributo
+list="": Se utiliza para asociar el elemento input con el elemento datalist, proporcionando una lista de opciones predefinidas que se sugieren al usuario cuando interactua con el campo de entrada
+
+Etiqueta
+select="": se utiliza para crear un menú desplegable o lista desplegable, permitiendo a los usuarios seleccionar una opción de una lista predefinida
+datalist: Se utiliza para definir una lista de opciones predefinidas que pueden ser utilizadas en un campo de entrada, permitiendo a los usuarios seleccionar una opción de una lista sin necesidad de escribirla manualmente
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+</head>
+<body>
+    <main>
+        <!-- <select name="curso" id="">
+            <option value="JavaScript">JavaScript</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS3">CSS3</option>
+            <option value="Web Standards">Web Standards</option>
+        </select> -->
+        <input list="Cursos">
+        <datalist id="Cursos">
+            <option value="JavaScript"></option>
+            <option value="HTML5"></option>
+            <option value="CSS3"></option>
+            <option value="Web Standards"></option>
+        </datalist>
+        <input type="submit">
+    </main>
+</body>
+</html>
