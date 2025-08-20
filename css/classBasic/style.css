@@ -1,0 +1,17 @@
+p {
+    color: blueviolet;
+    font-size: 40px;
+}
+
+/* Manera por Class
+Para cambiar el color del titulo, parrafo, etc */
+/* .parraph {
+    color: red;
+    font-size: 20px;
+} */
+
+/* Manera por id */
+/* #texto {
+    color: red;
+    font-size: 20px;
+} */

@@ -1,0 +1,51 @@
+<!-- Metodologia BEM: Para nombrar las clases en CSS 
+BEM singinfica Block Element Modifier Bloque, elemento, modificador
+Bloque: Es un componente independiente de la interfaz de usuario, como un botón o un formulario
+Elemento: Es una parte de un bloque que no tiene sentido por sí mismo, como un icono dentro de un botón
+Modificador: Es una variante de un bloque o elemento que cambia su apariencia o comportamiento, como un botón grande o un botón deshabilitado
+Ejemplo:
+Bloque: .button
+Elemento: .button__icon
+Modificador: .button--large
+
+DIFERENCIAS
+Pseudo classes ":class" define el estilo de un elemento en un estado específico, como :hover, :focus, :active
+Pseudo elements "::element" define el estilo de una parte específica de un elemento, como ::before, ::after, ::first-letter
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clase de pseudo</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+                <nav>
+                    <ul class="main-nav">
+                        <li class="main-nav_item"><a href="">Home</a></li>
+                        <li class="main-nav_item"><a href="">Cursos</a></li>
+                        <li class="main-nav_item"><a href="">Instructores</a></li>
+                        <li class="main-nav_item"><a href="">Blog</a></li>
+                    </ul>
+                </nav>
+        </header>
+
+        <!-- <main>
+            <section>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Cursos</a></li>
+                    <li><a href="">Instructores</a></li>
+                    <li><a href="">Blog</a></li>
+                </ul>
+            </section>
+        </main> -->
+
+    </body>
+</html>
