@@ -1,0 +1,17 @@
+/* Clase de anatomia de selectores y declaraciones
+
+Etiqueta p {
+    color: red;
+}         //Declaracion de estilo CSS dentro del {}
+
+p: Selector de etiqueta, selecciona todos los elementos <p> en el documento
+coolor: Propiedad CSS, define el color del texto
+red: Valor de la propiedad, establece el color del texto a rojo
+
+Cada que se da una fdeclaracioon de estilo CSS, se termina con ; para no generar ambiguedades al añadir más declaraciones
+
+*/
+
+p {
+    color: darkmagenta;
+}
