@@ -5,12 +5,15 @@
     Cada elemento en una página web se representa como una caja rectangular
     El modelo de caja consta de cuatro partes y estilos principales: margen, borde, relleno y contenido
     - Margen: Espacio fuera del borde de la caja, separa el elemento de otros elementos
-    - Borde: Línea que rodea el relleno y el contenido, puede tener un ancho y estilo definidos
+    - color de fondo: color que se aplica al área de contenido y relleno
+    - imagen de fondo: imagen que se aplica al área de contenido y relleno
     - Relleno: Espacio entre el borde y el contenido, se utiliza para crear espacio interno dentro de la caja
+    - Borde: Línea que rodea el relleno y el contenido, puede tener un ancho y estilo definidos
     - Contenido: Área donde se muestra el contenido del elemento, como texto o imágenes
+        Width y height definen el tamaño del contenido
     El modelo de caja se utiliza para controlar el diseño y la disposición de los elementos en una página web
     Los valores de margen, borde y relleno se pueden ajustar utilizando propiedades CSS como margin, border y padding
- -->
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +21,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo de caja</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main>
+        <section>
+            <h1>Soy titulo</h1>
+            <div>
+                <p>Soy un parrafo</p>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

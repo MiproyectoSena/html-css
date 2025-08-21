@@ -1,0 +1,15 @@
+/* Esta heredando de la fuente de html con 16px al 50%
+    p {
+        font-size: 50%;
+    }
+*/
+
+main {
+    background-color: lightgreen;
+    width: 100%;
+    height: 500px;
+}
+
+p {
+    font-size: 16px;
+}

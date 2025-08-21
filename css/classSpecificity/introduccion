@@ -1,0 +1,15 @@
+<!-- Ciomo se controla el orden al declarar CSS:
+importancia: Carga los estilos de forma distinta, si dos declaraciones tienen la misma importancia,Hoja de estilo de agente de usuario "estilos del navegador", declaraciones normales de hoja de estilode autor Css, Declaraciones importantes en hojas de estilos !important
+especificidad Selectores especificidad (whastapp)
+    Reglas de casacada: importancia, especificidad y orden de las fuentes
+orden de las fuentes: En tus estilos, las declaraciones al final del documento anularan a las que suceden antes en caso de conflicto
+    La importancia de las reglas de cascada: 
+    La especificidad de las reglas de cascada: 
+    El orden de las fuentes: 
+    La importancia, especificidad y orden de las fuentes son los tres conceptos que controlan el resultado final de las reglas CSS aplicadas a un elemento.
+    La importancia es un de los conceptos mas importantes, si dos declaraciones tienen la misma importancia, se aplica la que se declara mas abajo en el codigo, la especificidad de las reglas decidira cua debe aplicar
+    Si las reglas tienen la misma especificidad, se aplica la que se declara mas abajo en el codigo, el orden de las fuentes ciontrola el resultado final
+
+La importancia es un de los conceptos mas importantes}si dos declaraciones tienen la misma importancia, se aplica la que se declara mas abajo en el codigo, la especificidad de las reglas decidira cua debe aplicar
+Si las reglas tienen la misma especificidad, se aplica la que se declara mas abajo en el codigo, el orden de las fuentes ciontrola el resultado final
+-->
