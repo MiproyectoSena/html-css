@@ -1,15 +1,38 @@
-<!-- Ciomo se controla el orden al declarar CSS:
-importancia: Carga los estilos de forma distinta, si dos declaraciones tienen la misma importancia,Hoja de estilo de agente de usuario "estilos del navegador", declaraciones normales de hoja de estilode autor Css, Declaraciones importantes en hojas de estilos !important
-especificidad Selectores especificidad (whastapp)
-    Reglas de casacada: importancia, especificidad y orden de las fuentes
-orden de las fuentes: En tus estilos, las declaraciones al final del documento anularan a las que suceden antes en caso de conflicto
-    La importancia de las reglas de cascada: 
-    La especificidad de las reglas de cascada: 
-    El orden de las fuentes: 
-    La importancia, especificidad y orden de las fuentes son los tres conceptos que controlan el resultado final de las reglas CSS aplicadas a un elemento.
-    La importancia es un de los conceptos mas importantes, si dos declaraciones tienen la misma importancia, se aplica la que se declara mas abajo en el codigo, la especificidad de las reglas decidira cua debe aplicar
-    Si las reglas tienen la misma especificidad, se aplica la que se declara mas abajo en el codigo, el orden de las fuentes ciontrola el resultado final
+<!-- Especificidad y orden de la declaracion  
+Como se controla el orden al declarar CSS:
+    1. Importancia
+    2. Especificidad
+    3. Orden de las fuentes
 
-La importancia es un de los conceptos mas importantes}si dos declaraciones tienen la misma importancia, se aplica la que se declara mas abajo en el codigo, la especificidad de las reglas decidira cua debe aplicar
-Si las reglas tienen la misma especificidad, se aplica la que se declara mas abajo en el codigo, el orden de las fuentes ciontrola el resultado final
+Importancia: Es uno de los conceptos mas importantes en CSS. 
+La importancia se refiere a la prioridad que tiene una regla CSS sobre otra.
+Las reglas con `!important` tienen la mayor prioridad, pero su uso debe ser limitado, ejemplo: Si dos declaraciones tienen la misma importancia, la especificidad de las reglas decidira cual se debe aplicar. Si las reglas tienen la misma especificidad, el orden de las fuentes controla el resultado final
+La especificidad es un concepto clave en CSS que determina qué reglas se aplican a un elemento cuando hay múltiples reglas que podrían coincidir. La especificidad se calcula en función de los selectores utilizados en las reglas CSS.
+    1. Hoja de estilo de agente de usuario (Estilos del navegador)
+    2. Declaraciones normales en hojas de estilo de autor (nuestro.css)
+    3. Declaraciones importantes en hojas de estilo de autor (utilizar el !important)
+
+Especificidad:
+El numero ubicado a la derecha es menops importante, y el numero ubicado a la izquierda es el mas importante para el navegador
+Hay clases o etiquetas que tienen un estilo por defecto, y si no se le asigna un estilo, el navegador le asignara un estilo por defecto
+
+    //Selectores        //Especificidad
+    !important              1,0,0,0,0       //Evitar utilizar el !important
+    Inline styles           0,1,0,0,0
+    #id                     0,0,1,0,0       //Evitar utilizar el id para estilos
+    .class                  0,0,0,1,0                      
+    tag                     0,0,0,0,1
+//Nota: Se comporta tipo binario
+
+Reglas de casacada:
+Diagrama:
+                                                    
+                                       no                                            no                                              no                                                               no
+    Conflicto en la declaracion ->           Dieferente origen o !important ->                ¿Tienen algun inline stylle? ->                  ¿Los selectores tienen una especificidad diferente?        -> Utiliza las declaraciones que vienen en su fuente original
+                                                                        si                                              si                                                                    si
+                                                                        |                                               |                                                                     |
+                                Utiliza la declaracion con el origen de mayor prioridad             Utiliza las inline declaration              Utiliza las declaraciones con mayor especificidad
+
+Orden de las fuentes: 
+
 -->
